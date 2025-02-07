@@ -47,6 +47,7 @@ namespace SmartHouse.Devices
             Console.WriteLine(Name + " has the brightness: " + brightness);
         }
 
+        //user can change the color of smart light
         public void ChangeColor(string changedColor)
         {
             if (status == false)
@@ -58,6 +59,8 @@ namespace SmartHouse.Devices
             color = changedColor;
             Console.WriteLine("Color of " + Name + " is now: " + color);
         }
+
+        //user can see the current status of the device 
         public string GetStatus()
         {
             return status ? $"{Name} is ON, Brightness: {brightness}%, Color: {color}" : $"{Name} is OFF";
