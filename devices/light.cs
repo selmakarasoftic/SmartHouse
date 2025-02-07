@@ -2,67 +2,65 @@
 if it is turned on - it should allow user to set the brightness, change color.
 user can see the the current status of the light if wanted*/
 
-using System
+using System;
+using SmartHouse.Interface;
 
-namespace SmartHouse.devices
+namespace SmartHouse.Devices
 {
-    public classs light
+    public class Light : DevicesBasic
     {
-    private string Name;
-    private bool Status;
-    private interface Brightness;
-    private String Color;
+        private string deviceName = "Light";
+        private bool status = false;
+        private int brightness = 100;
+        private string color = "White";
 
-    public Light(string name, int brightness, string color)
-    {
-        Name = name;
-        Brightness = brightness;
-        Color = color;
-        Status = false;
-    }
-
-    //giving the user option to turn on the light/change the status of light
-    public void TurnOn()
-    {
-        Status = true;
-        Console.WriteLine(Name + " is turned ON.")
-    }
-    public void TurnOff()
-    {
-        Status = false;
-        Console.WriteLine(Name + " is turned OFF.")
-        }
-
-    //if the light is on user can change brightness and color 
-    public void AdjustBrightness(int level)
-    {
-        if (Status == false)
+        public string Name
         {
-            Console.WriteLine(" Device: " + Name + " is currently OFF");
-            return;
+            get { return deviceName; }
         }
 
-        if (level > 100) level = 100;
-        if (level < 0) level = 0;
-
-        Brightness = level
-        Console.WriteLine(Name + " has the brightness: " + Brightness)
-    }
-
-    public void ChangeColor(string ChangedColor)
-    {
-        if (Status == false)
+        //giving the user option to turn on the light/change the status of light
+        public void TurnOn()
         {
-            Console.WriteLine(" Device: " + Name + " is currently OFF");
-            return;
+            status = true;
+            Console.WriteLine(Name + " is turned ON.");
+        }
+        public void TurnOff()
+        {
+            status = false;
+            Console.WriteLine(Name + " is turned OFF.");
         }
 
-        Color = ChangedColor;
-        Console.WriteLine("Color of " + Name + " is now: " + Color);
+        //if the light is on user can change brightness and color 
+        public void AdjustBrightness(int level)
+        {
+            if (status == false)
+            {
+                Console.WriteLine(" Device: " + Name + " is currently OFF");
+                return;
+            }
+
+            if (level > 100) level = 100;
+            if (level < 0) level = 0;
+
+            brightness = level;
+            Console.WriteLine(Name + " has the brightness: " + brightness);
+        }
+
+        public void ChangeColor(string changedColor)
+        {
+            if (status == false)
+            {
+                Console.WriteLine(" Device: " + Name + " is currently OFF");
+                return;
+            }
+
+            color = changedColor;
+            Console.WriteLine("Color of " + Name + " is now: " + color);
+        }
+        public string GetStatus()
+        {
+            return status ? $"{Name} is ON, Brightness: {brightness}%, Color: {color}" : $"{Name} is OFF";
+        }
     }
-    public void ShowStatus()
-    {
-        Console.WriteLine(Name + " - " + (Status ? "ON" : "OFF") + ", Brightness: " + Brightness + "%, Color: " + Color);
-    }
-}
 }
