@@ -1,6 +1,7 @@
-namespace SmartHouse.interface
+using System;
+namespace SmartHouse.Interface
 {
- public interface devicesBasic{
+ public interface DevicesBasic{
     string Name{get;}
     void TurnOff();
     void TurnOn();
