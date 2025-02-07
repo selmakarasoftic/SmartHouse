@@ -7,7 +7,7 @@ using SmartHouse.Interface;
 
 namespace SmartHouse.Devices
 {
-    public class Light : DevicesBasic
+    public class Light : IDevicesBasic, IStatus
     {
         private string deviceName = "Light";
         private bool status = false;

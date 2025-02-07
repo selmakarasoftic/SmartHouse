@@ -1,10 +1,9 @@
 using System;
 namespace SmartHouse.Interface
 {
- public interface DevicesBasic{
+ public interface IDevicesBasic{
     string Name{get;}
     void TurnOff();
     void TurnOn();
-    string GetStatus();
  }
 }
