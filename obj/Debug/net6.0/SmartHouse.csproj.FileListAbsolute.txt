@@ -1,0 +1,15 @@
+D:\skyline\SmartHouse\obj\Debug\net6.0\SmartHouse.GeneratedMSBuildEditorConfig.editorconfig
+D:\skyline\SmartHouse\obj\Debug\net6.0\SmartHouse.AssemblyInfoInputs.cache
+D:\skyline\SmartHouse\obj\Debug\net6.0\SmartHouse.AssemblyInfo.cs
+D:\skyline\SmartHouse\obj\Debug\net6.0\SmartHouse.csproj.CoreCompileInputs.cache
+D:\skyline\SmartHouse\obj\Debug\net6.0\SmartHouse.sourcelink.json
+D:\skyline\SmartHouse\bin\Debug\net6.0\SmartHouse.exe
+D:\skyline\SmartHouse\bin\Debug\net6.0\SmartHouse.deps.json
+D:\skyline\SmartHouse\bin\Debug\net6.0\SmartHouse.runtimeconfig.json
+D:\skyline\SmartHouse\bin\Debug\net6.0\SmartHouse.dll
+D:\skyline\SmartHouse\bin\Debug\net6.0\SmartHouse.pdb
+D:\skyline\SmartHouse\obj\Debug\net6.0\SmartHouse.dll
+D:\skyline\SmartHouse\obj\Debug\net6.0\refint\SmartHouse.dll
+D:\skyline\SmartHouse\obj\Debug\net6.0\SmartHouse.pdb
+D:\skyline\SmartHouse\obj\Debug\net6.0\SmartHouse.genruntimeconfig.cache
+D:\skyline\SmartHouse\obj\Debug\net6.0\ref\SmartHouse.dll

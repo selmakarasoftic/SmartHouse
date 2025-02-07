@@ -22,7 +22,7 @@ namespace SmartHouse.Devices
                 Console.WriteLine($"- {device}");
             }
         }
-        public IStatus GetDevice(string name)
+        public IStatus? GetDevice(string name)
         {
             return devices.ContainsKey(name) ? devices[name] : null;
         }
