@@ -8,10 +8,10 @@ namespace SmartHouse.devices
 {
     public classs light
     {
-        public string Name;
-    public bool Status;
-    public interface Brightness;
-    public String Color;
+    private string Name;
+    private bool Status;
+    private interface Brightness;
+    private String Color;
 
     public Light(string name, int brightness, string color)
     {
