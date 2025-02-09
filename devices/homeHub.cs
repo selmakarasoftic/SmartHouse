@@ -12,6 +12,10 @@ namespace SmartHouse.Devices
         {
             devices["Light"] = new Light();
             devices["Door"] = new Door();
+            devices["Thermostat"] = new Thermostat();
+            devices["Speaker"] = new Speaker();
+            devices["Coffee Maker"] = new CoffeeMaker();
+
         }
 
         public void ShowDevices()

@@ -3,11 +3,11 @@ using SmartHouse.Interface;
 
 namespace SmartHouse.Devices
 {
-    public class CoffeeMaker : IDevicesBasic, IStatus
+    public class Thermostat : IDevicesBasic, IStatus
     {
-        private string deviceName = "Coffee Maker";
+        private string deviceName = "Thermostat";
         private bool status = false;
-        private string coffeeType = "None";
+        private int temperature = 22;  
 
         public string Name
         {
@@ -26,7 +26,7 @@ namespace SmartHouse.Devices
             Console.WriteLine(Name + " is turned OFF.");
         }
 
-        public void MakeCoffee(string type)
+        public void SetTemperature(int temp)
         {
             if (!status)
             {
@@ -34,15 +34,16 @@ namespace SmartHouse.Devices
                 return;
             }
 
-            coffeeType = type;
-            Console.WriteLine(Name + " is making: " + coffeeType);
-            Thread.Sleep(10000);
-            Console.WriteLine("Coffee is done! Enjoy your " + coffeeType + "!");
+            if (temp < 16) temp = 16;  
+            if (temp > 30) temp = 30;  
+
+            temperature = temp;
+            Console.WriteLine(Name + " temperature set to " + temperature + "°C.");
         }
 
         public string GetStatus()
         {
-            return status ? $"{Name} is ON, Making: {coffeeType}" : $"{Name} is OFF.";
+            return status ? $"{Name} is ON, Temperature: {temperature}°C." : $"{Name} is OFF.";
         }
     }
 }
